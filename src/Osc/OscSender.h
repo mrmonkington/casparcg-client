@@ -2,7 +2,7 @@
 
 #include "Shared.h"
 
-#include "osc/OscOutboundPacketStream.h"
+#include <osc/OscOutboundPacketStream.h>
 #include <ip/UdpSocket.h>
 
 #include <QtCore/QObject>

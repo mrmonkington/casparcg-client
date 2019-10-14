@@ -5,7 +5,7 @@ CONFIG += c++11
 TARGET = osc
 TEMPLATE = lib
 
-DEFINES += OSC_LIBRARY _GLIBCXX_USE_CXX11_ABI=0 QT_COMPILING_QSTRING_COMPAT_CPP
+DEFINES += OSC_LIBRARY _GLIBCXX_USE_CXX11_ABI=1 QT_COMPILING_QSTRING_COMPAT_CPP
 
 HEADERS += \
     Shared.h \
@@ -32,6 +32,7 @@ CONFIG(system-boost) {
 
 CONFIG(system-oscpack) {
     LIBS += -loscpack
+    INCLUDEPATH += /usr/include/oscpack/
 } else {
     DEPENDPATH += $$PWD/../../lib/oscpack/include
     INCLUDEPATH += $$PWD/../../lib/oscpack/include

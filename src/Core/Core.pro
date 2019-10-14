@@ -5,7 +5,7 @@ CONFIG += c++11
 TARGET = core
 TEMPLATE = lib
 
-DEFINES += CORE_LIBRARY _GLIBCXX_USE_CXX11_ABI=0 QT_COMPILING_QSTRING_COMPAT_CPP
+DEFINES += CORE_LIBRARY _GLIBCXX_USE_CXX11_ABI=1 QT_COMPILING_QSTRING_COMPAT_CPP
 
 HEADERS += \
     DatabaseManager.h \
@@ -405,6 +405,7 @@ else:unix:CONFIG(debug, debug|release):LIBS += -L$$PWD/../../lib/qatemcontrol/li
 
 CONFIG(system-oscpack) {
 LIBS += -loscpack
+INCLUDEPATH += /usr/include/oscpack/
 } else {
 DEPENDPATH += $$PWD/../../lib/oscpack/include
 INCLUDEPATH += $$PWD/../../lib/oscpack/include
